@@ -1,5 +1,6 @@
 import Card from "./Card";
 import { useState } from 'react';
+import Btns from "./Btns";
 
 function Section() {
 	const arr = [
@@ -14,8 +15,7 @@ function Section() {
 	];
 
 	const [count, setCount] = useState(0);
-	// let으로 바꾸면
-	// 밑에 onclick시에 --count, ++count 로 써야함
+
 	return (
 		<>
 			<section style={{
@@ -29,8 +29,8 @@ function Section() {
 				})}
 			</section>
 
-			<a href="#" className="prev" onClick={() => setCount(count - 1)} />
-			<a href="#" className="next" onClick={() => setCount(count + 1)} />
+			<Btns count={count} setCount={setCount} />
+			{/* 하위 Btns 컴포넌트에 props 넘겨주기 */}
 		</>
 	);
 }

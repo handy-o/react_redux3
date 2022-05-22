@@ -5,9 +5,9 @@ body {
 	height: 100vh;
 	background: linear-gradient(45deg, hotpink, violet);
 	position: relative;
-	overflow: hidden;
+	//overflow: hidden;
 
 	@import 'header';
-
+	@import 'section';
 	@import 'footer';
 }
